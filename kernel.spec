@@ -56,7 +56,7 @@ Summary: The Linux kernel
 %global zipsed -e 's/\.ko$/\.ko.xz/'
 %endif
 
-# define buildid .local
+%define buildid .jda
 
 %if 0%{?fedora}
 %define primary_target fedora
@@ -916,7 +916,7 @@ Patch514: tpm-check-event-log-version-before-reading-final-eve.patch
 
 # CVE-2020-12655 rhbz 1832543 1832545
 Patch515: 0001-xfs-add-agf-freeblocks-verify-in-xfs_agf_verify.patch
-
+Patch520: lx2k-pci.patch
 # END OF PATCH DEFINITIONS
 
 %endif
